@@ -1,0 +1,41 @@
+#/** @file
+#
+#    Copyright (c) 2015-2016, Hisilicon Limited. All rights reserved.
+#    Copyright (c) 2015-2016, Linaro Limited. All rights reserved.
+#
+#    This program and the accompanying materials
+#    are licensed and made available under the terms and conditions of the BSD License
+#    which accompanies this distribution. The full text of the license may be found at
+#    http://opensource.org/licenses/bsd-license.php
+#
+#    THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
+#    WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+#
+#**/
+
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = HisiPkg
+  PACKAGE_GUID                   = c6013a10-758c-4c0d-bd07-e601e6721f86
+  PACKAGE_VERSION                = 0.1
+
+[Includes]
+  Include
+
+[Ppis]
+
+
+
+[Protocols]
+
+[Guids]
+  gHisiTokenSpaceGuid = { 0xc8bc553e, 0x12bf, 0x11e6, { 0x97, 0x4f, 0x87, 0xf7, 0x7c, 0xfd, 0x52, 0x1d }}
+
+[LibraryClasses]
+
+[PcdsFixedAtBuild]
+
+[PcdsFeatureFlag]
+
+
+
