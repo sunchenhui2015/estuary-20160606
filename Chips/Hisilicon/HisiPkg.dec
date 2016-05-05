@@ -35,6 +35,8 @@
 
 [PcdsFixedAtBuild]
 
+  gHisiTokenSpaceGuid.PcdSerialPortSendDelay|500000|UINT32|0x01000010
+  gHisiTokenSpaceGuid.PcdUartClkInHz|24000000|UINT32|0x0100001F
 [PcdsFeatureFlag]
 
 
