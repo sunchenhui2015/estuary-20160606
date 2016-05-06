@@ -15,19 +15,18 @@
 
 [Defines]
   INF_VERSION                    = 0x00010005
-  BASE_NAME                      = PlatformSysCtrlLibPv660
-  FILE_GUID                      = EBF63479-8F72-4ada-8B2A-960322F7F61A
+  BASE_NAME                      = OemAddressMapPv660D02
+  FILE_GUID                      = DDDA42BC-772E-4ff5-8C9F-524F7F6601A2
   MODULE_TYPE                    = BASE
   VERSION_STRING                 = 1.0
-  LIBRARY_CLASS                  = PlatformSysCtrlLib
+  LIBRARY_CLASS                  = OemAddressMapLib
 
 [Sources.common]
 
-
-[Sources.AARCH64]
+[Sources.AARCH64.GCC]
 
 [Binaries.AARCH64]
- LIB|PlatformSysCtrlLibPv660.lib|*
+  LIB|OemAddressMapPv660D02.lib|*
 
 [Packages]
   MdePkg/MdePkg.dec
@@ -37,18 +36,9 @@
   OpenPlatformPkg/Chips/Hisilicon/HisiPkg.dec
 
 [LibraryClasses]
-  ArmLib
-  OemAddressMapLib
-  OemMiscLib
-
-[Pcd]
-  gHisiTokenSpaceGuid.PcdPlatformDefaultPackageType
-  gHisiTokenSpaceGuid.PcdTrustedFirmwareEnable
-
-  gHisiTokenSpaceGuid.PcdM3SmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdPcieSmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdDsaSmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdAlgSmmuBaseAddress
 
 [BuildOptions]
+
+[Pcd]
+  gHisiTokenSpaceGuid.PcdNORFlashBase
 

@@ -15,40 +15,37 @@
 
 [Defines]
   INF_VERSION                    = 0x00010005
-  BASE_NAME                      = PlatformSysCtrlLibPv660
-  FILE_GUID                      = EBF63479-8F72-4ada-8B2A-960322F7F61A
-  MODULE_TYPE                    = BASE
+  BASE_NAME                      = EarlyConfigPeim
+  FILE_GUID                      = A181AD33-E64A-4084-A54A-A69DF1FB0ABF
+  MODULE_TYPE                    = PEIM
   VERSION_STRING                 = 1.0
-  LIBRARY_CLASS                  = PlatformSysCtrlLib
+  ENTRY_POINT                    = EarlyConfigEntry
 
 [Sources.common]
-
-
-[Sources.AARCH64]
-
-[Binaries.AARCH64]
- LIB|PlatformSysCtrlLibPv660.lib|*
+  EarlyConfigPeim.c
 
 [Packages]
   MdePkg/MdePkg.dec
   MdeModulePkg/MdeModulePkg.dec
-  ArmPkg/ArmPkg.dec
 
   OpenPlatformPkg/Chips/Hisilicon/HisiPkg.dec
 
 [LibraryClasses]
-  ArmLib
-  OemAddressMapLib
-  OemMiscLib
+  PeimEntryPoint
+  PcdLib
+  DebugLib
+  IoLib
+  CacheMaintenanceLib
+
+  PlatformSysCtrlLib
 
 [Pcd]
-  gHisiTokenSpaceGuid.PcdPlatformDefaultPackageType
-  gHisiTokenSpaceGuid.PcdTrustedFirmwareEnable
+  gHisiTokenSpaceGuid.PcdMailBoxAddress
+  gHisiTokenSpaceGuid.PcdPeriSubctrlAddress
 
-  gHisiTokenSpaceGuid.PcdM3SmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdPcieSmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdDsaSmmuBaseAddress
-  gHisiTokenSpaceGuid.PcdAlgSmmuBaseAddress
+[Depex]
+## As we will clean mailbox in this module, need to wait memory init complete
+  gEfiPeiMemoryDiscoveredPpiGuid
 
 [BuildOptions]
 

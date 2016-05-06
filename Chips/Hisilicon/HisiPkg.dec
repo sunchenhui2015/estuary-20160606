@@ -35,11 +35,41 @@
 [LibraryClasses]
 
 [PcdsFixedAtBuild]
+  gHisiTokenSpaceGuid.PcdNORFlashBase|0x00000000|UINT64|0x01000008
+  gHisiTokenSpaceGuid.PcdNORFlashCachableSize|0x1000000|UINT32|0x0100000c
 
   gHisiTokenSpaceGuid.PcdSerialPortSendDelay|500000|UINT32|0x01000010
   gHisiTokenSpaceGuid.PcdUartClkInHz|24000000|UINT32|0x0100001F
   gHisiTokenSpaceGuid.PcdSerialRegisterSpaceSize|0x10000|UINT64|0x01000019
+
+  gHisiTokenSpaceGuid.PcdDsaSmmuBaseAddress|0|UINT64|0x00000047
+  gHisiTokenSpaceGuid.PcdPcieSmmuBaseAddress|0|UINT64|0x00000046
+  gHisiTokenSpaceGuid.PcdAlgSmmuBaseAddress|0|UINT64|0x00000048
+  gHisiTokenSpaceGuid.PcdM3SmmuBaseAddress|0|UINT64|0x00000049
+
+  gHisiTokenSpaceGuid.PcdSysControlBaseAddress|0|UINT64|0x01000023
   gHisiTokenSpaceGuid.PcdCpldBaseAddress|0|UINT64|0x01000024
+  gHisiTokenSpaceGuid.PcdMailBoxAddress|0|UINT64|0x01000025
+
+  gHisiTokenSpaceGuid.PcdSFCCFGBaseAddress|0|UINT64|0x01000037
+  gHisiTokenSpaceGuid.PcdSFCMEM0BaseAddress|0|UINT64|0x01000038
+
+  gHisiTokenSpaceGuid.PcdPeriSubctrlAddress|0|UINT64|0x01000041
+  gHisiTokenSpaceGuid.PcdSystemProductName|L""|VOID*|0x30000053
+  gHisiTokenSpaceGuid.PcdSystemVersion|L""|VOID*|0x30000054
+  gHisiTokenSpaceGuid.PcdBaseBoardProductName|L""|VOID*|0x30000055
+  gHisiTokenSpaceGuid.PcdBaseBoardVersion|L""|VOID*|0x30000056
+  gHisiTokenSpaceGuid.PcdPlatformDefaultPackageType|0x0|UINT32|0x40000001
+
+  gHisiTokenSpaceGuid.PcdTopOfLowMemory|0x0|UINT32|0x40000002
+  gHisiTokenSpaceGuid.PcdBottomOfHighMemory|0x0|UINT64|0x40000003
+
+  gHisiTokenSpaceGuid.PcdSlotPerChannelNum|0x0|UINT32|0x40000004
+  gHisiTokenSpaceGuid.PcdTrustedFirmwareEnable|0x0|UINT64|0x40000008
+  gHisiTokenSpaceGuid.PcdTrustedFirmwareBL1Base|0x0|UINT64|0x40000009
+  gHisiTokenSpaceGuid.PcdTrustedFirmwareMagicNum|0x5A5A5A5A|UINT32|0x4000000a
+
+  gHisiTokenSpaceGuid.PcdArmPrimaryCoreTemp|0x0|UINT64|0x10000038
 [PcdsFeatureFlag]
 
 
