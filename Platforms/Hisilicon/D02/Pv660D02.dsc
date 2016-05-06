@@ -57,6 +57,8 @@
 
   CpldIoLib|OpenPlatformPkg/Chips/Hisilicon/Library/CpldIoLib/CpldIoLib.inf
 
+  SerdesLib|OpenPlatformPkg/Chips/Hisilicon/Binary/Pv660/Library/Pv660Serdes/Pv660SerdesLib.inf
+
   # ARM PL031 RTC Driver
   #RealTimeClockLib|ArmPlatformPkg/Library/PL031RealTimeClockLib/PL031RealTimeClockLib.inf
   RealTimeClockLib|OpenPlatformPkg/Chips/Hisilicon/Library/VirtualRealTimeClockLib/RealTimeClockLib.inf
@@ -315,6 +317,8 @@
       NULL|MdeModulePkg/Library/DxeCrc32GuidedSectionExtractLib/DxeCrc32GuidedSectionExtractLib.inf
   }
   MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
+
+  OpenPlatformPkg/Chips/Hisilicon/Pv660/Drivers/IoInitDxe/IoInitDxe.inf
 
   #
   # Architectural Protocols
