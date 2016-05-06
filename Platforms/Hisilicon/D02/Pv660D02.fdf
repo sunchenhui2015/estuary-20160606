@@ -204,6 +204,11 @@ READ_LOCK_STATUS   = TRUE
   INF IntelFrameworkModulePkg/Universal/StatusCode/RuntimeDxe/StatusCodeRuntimeDxe.inf
 
   #
+  # UEFI application (Shell Embedded Boot Loader)
+  #
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D02/Ebl/Ebl.inf
+
+  #
   # Build Shell from latest source code instead of prebuilt binary
   #
   #INF ShellBinPkg/UefiShell/UefiShell.inf

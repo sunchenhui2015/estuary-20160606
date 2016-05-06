@@ -362,6 +362,7 @@
   MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
   MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
 
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D02/Ebl/Ebl.inf
   MdeModulePkg/Application/HelloWorld/HelloWorld.inf
   #
   # Bds
