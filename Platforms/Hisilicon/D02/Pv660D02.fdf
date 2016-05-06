@@ -197,6 +197,7 @@ READ_LOCK_STATUS   = TRUE
   #
   # FAT filesystem + GPT/MBR partitioning
   #
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/ramdisk/ramdisk.inf
   INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
   INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
   INF FatBinPkg/EnhancedFatDxe/Fat.inf

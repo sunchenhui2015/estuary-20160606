@@ -230,6 +230,9 @@
   gHisiTokenSpaceGuid.PcdCpldBaseAddress|0x98000000
   gHisiTokenSpaceGuid.PcdSFCCFGBaseAddress|0xA6000000
   gHisiTokenSpaceGuid.PcdSFCMEM0BaseAddress|0xA4000000
+
+  gHisiTokenSpaceGuid.PcdRamDiskMaxSize|128
+
   gHisiTokenSpaceGuid.PcdPeriSubctrlAddress|0x80000000
 
   ## 1+1
@@ -358,6 +361,7 @@
   #
   # FAT filesystem + GPT/MBR partitioning
   #
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/ramdisk/ramdisk.inf
   MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
   MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
   MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
