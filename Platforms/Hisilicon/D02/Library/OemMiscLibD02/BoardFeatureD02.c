@@ -21,6 +21,14 @@
 #include <Library/CpldIoLib.h>
 #include <Library/CpldD02.h>
 #include <Library/TimerLib.h>
+#include <Library/I2CLib.h>
+
+I2C_DEVICE gDS3231RtcDevice = {
+    .Socket = 0,
+    .Port = 7,
+    .DeviceType = DEVICE_TYPE_SPD,
+    .SlaveDeviceAddress = 0x68
+};
 
 // Set Tx output polarity. Not inverting data is default. For Phosphor660 D02 Board
 //if((1 == ulMacroId) && ((7 == ulDsNum)||(0 == ulDsNum)))
