@@ -22,6 +22,7 @@
   LIBRARY_CLASS                  = OemMiscLib
 
 [Sources.common]
+  BoardFeatureD02.c
   OemMiscLibD02.c
 
 [Packages]
@@ -30,6 +31,7 @@
   ArmPkg/ArmPkg.dec
 
   OpenPlatformPkg/Chips/Hisilicon/HisiPkg.dec
+  OpenPlatformPkg/Platforms/Hisilicon/D02/Pv660D02.dec
 
 [LibraryClasses]
   SerialPortLib
