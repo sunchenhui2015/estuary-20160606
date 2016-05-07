@@ -18,6 +18,7 @@
 #define _OEM_MISC_LIB_H_
 
 #include <Uefi.h>
+#include <Library/I2CLib.h>
 
 #define PCIEDEVICE_REPORT_MAX      4
 typedef struct _REPORT_PCIEDIDVID2BMC{
@@ -31,6 +32,8 @@ extern REPORT_PCIEDIDVID2BMC PcieDeviceToReport[PCIEDEVICE_REPORT_MAX];
 BOOLEAN OemIsSocketPresent (UINTN Socket);
 VOID CoreSelectBoot(VOID);
 VOID OemPcieResetAndOffReset(void);
+extern I2C_DEVICE gDS3231RtcDevice;
+
 BOOLEAN OemIsMpBoot();
 UINT32 OemIsWarmBoot();
 
