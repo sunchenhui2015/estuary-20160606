@@ -30,6 +30,7 @@ extern REPORT_PCIEDIDVID2BMC PcieDeviceToReport[PCIEDEVICE_REPORT_MAX];
 
 BOOLEAN OemIsSocketPresent (UINTN Socket);
 VOID CoreSelectBoot(VOID);
+VOID OemPcieResetAndOffReset(void);
 BOOLEAN OemIsMpBoot();
 UINT32 OemIsWarmBoot();
 
