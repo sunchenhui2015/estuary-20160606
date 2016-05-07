@@ -275,6 +275,7 @@ READ_LOCK_STATUS   = TRUE
   INF ArmPlatformPkg/PrePeiCore/PrePeiCoreMPCore.inf
   INF MdeModulePkg/Core/Pei/PeiMain.inf
   INF ArmPlatformPkg/PlatformPei/PlatformPeim.inf
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/VersionInfoPeim/VersionInfoPeim.inf
   #INF ArmPlatformPkg/MemoryInitPei/MemoryInitPeim.inf
   #INF OpenPlatformPkg/Chips/Hisilicon/Override/ArmPlatformPkg/MemoryInitPei/MemoryInitPeim.inf
   INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D02/MemoryInitPei/MemoryInitPeim.inf
