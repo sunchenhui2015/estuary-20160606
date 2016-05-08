@@ -259,6 +259,8 @@
   gArmPlatformTokenSpaceGuid.PcdSP804TimerPerformanceBase|0x80060000
   gArmPlatformTokenSpaceGuid.PcdSP804TimerMetronomeBase|0x80060000
 
+  gHisiTokenSpaceGuid.PcdPcieRootBridgeMask|0x6 # bit0:HB0RB0,bit1:HB0RB1,bit2:HB0RB2,bit3:HB0RB3,bit4:HB1RB0,bit5:HB1RB1,bit6:HB1RB2,bit7:HB1RB3^M
+
 ################################################################################
 #
 # Components Section - list of all EDK II Modules needed by this Platform
@@ -369,6 +371,9 @@
   ArmPlatformPkg/Drivers/SP805WatchdogDxe/SP805WatchdogDxe.inf
 
   IntelFrameworkModulePkg/Universal/StatusCode/RuntimeDxe/StatusCodeRuntimeDxe.inf
+
+  #Pci Express
+  OpenPlatformPkg/Chips/Hisilicon/Pv660/Drivers/PcieInitDxe/PcieInitDxe.inf
 
   #
   #network
