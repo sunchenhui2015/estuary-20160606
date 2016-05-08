@@ -160,6 +160,7 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
 
   INF MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/NorFlashDxe/NorFlashDxe.inf
   INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D02/Drivers/SFC/SfcDxeDriver.inf
 
   INF OpenPlatformPkg/Platforms/Hisilicon/D02/OemNicConfigD02/OemNicConfigD02.inf
