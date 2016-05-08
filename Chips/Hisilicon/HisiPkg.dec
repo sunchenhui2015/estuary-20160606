@@ -82,6 +82,55 @@
   gHisiTokenSpaceGuid.PcdArmPrimaryCoreTemp|0x0|UINT64|0x10000038
 
   gHisiTokenSpaceGuid.PcdPcieRootBridgeMask|0|UINT32|0x00000044
+  gHisiTokenSpaceGuid.PcdPcieRootBridgeMask2P|0|UINT32|0x00000045
+
+  gHisiTokenSpaceGuid.PcdHb1BaseAddress|0x400000000000|UINT64|0x00000051   # 4T
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciConfigurationSpaceBaseAddress|0|UINT64|0x00000052
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciConfigurationSpaceSize|0|UINT64|0x00000053
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciConfigurationSpaceBaseAddress|0|UINT64|0x00000054
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciConfigurationSpaceSize|0|UINT64|0x00000055
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciConfigurationSpaceBaseAddress|0|UINT64|0x00000056
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciConfigurationSpaceSize|0|UINT64|0x00000057
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceBaseAddress|0|UINT64|0x00000058
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceSize|0|UINT64|0x00000059
+
+  gHisiTokenSpaceGuid.PciHb0Rb0Base|0|UINT64|0x0000005a
+  gHisiTokenSpaceGuid.PciHb0Rb1Base|0|UINT64|0x0000005b
+  gHisiTokenSpaceGuid.PciHb0Rb2Base|0|UINT64|0x0000005c
+  gHisiTokenSpaceGuid.PciHb0Rb3Base|0|UINT64|0x0000005d
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciRegionBaseAddress|0|UINT64|0x8000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionBaseAddress|0|UINT64|0x8000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionBaseAddress|0|UINT64|0x8000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciRegionBaseAddress|0|UINT64|0x8000005d
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciRegionSize|0|UINT64|0x6000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionSize|0|UINT64|0x6000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionSize|0|UINT64|0x6000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciRegionSize|0|UINT64|0x6000005d
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0CpuMemRegionBase|0|UINT64|0x7000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1CpuMemRegionBase|0|UINT64|0x7000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2CpuMemRegionBase|0|UINT64|0x7000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3CpuMemRegionBase|0|UINT64|0x7000005d
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0CpuIoRegionBase|0|UINT64|0x3000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1CpuIoRegionBase|0|UINT64|0x3000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2CpuIoRegionBase|0|UINT64|0x3000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3CpuIoRegionBase|0|UINT64|0x3000005d
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0IoBase|0|UINT64|0x9000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1IoBase|0|UINT64|0x9000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2IoBase|0|UINT64|0x9000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3IoBase|0|UINT64|0x9000005d
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0IoSize|0|UINT64|0x2000005a
+  gHisiTokenSpaceGuid.PcdHb0Rb1IoSize|0|UINT64|0x2000005b
+  gHisiTokenSpaceGuid.PcdHb0Rb2IoSize|0|UINT64|0x2000005c
+  gHisiTokenSpaceGuid.PcdHb0Rb3IoSize|0|UINT64|0x2000005d
+
+  gHisiTokenSpaceGuid.Pcdsoctype|0|UINT32|0x00000061
+  gHisiTokenSpaceGuid.PcdPcieMsiTargetAddress|0x0|UINT64|0x00000064
+
 [PcdsFeatureFlag]
 
 
