@@ -260,6 +260,44 @@
   gArmPlatformTokenSpaceGuid.PcdSP804TimerMetronomeBase|0x80060000
 
   gHisiTokenSpaceGuid.PcdPcieRootBridgeMask|0x6 # bit0:HB0RB0,bit1:HB0RB1,bit2:HB0RB2,bit3:HB0RB3,bit4:HB1RB0,bit5:HB1RB1,bit6:HB1RB2,bit7:HB1RB3^M
+  gHisiTokenSpaceGuid.PcdHb1BaseAddress|0x400000000000 # 4T
+
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciConfigurationSpaceBaseAddress|0x30000000000
+  gHisiTokenSpaceGuid.PcdHb0Rb0PciConfigurationSpaceSize|0x10000000000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciConfigurationSpaceBaseAddress|0x22000000000
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciConfigurationSpaceSize|0x10000000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciConfigurationSpaceBaseAddress|0x24000000000
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciConfigurationSpaceSize|0x10000000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceBaseAddress|0x26000000000
+  gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceSize|0x10000000
+
+  gHisiTokenSpaceGuid.PciHb0Rb0Base|0xb0070000
+  gHisiTokenSpaceGuid.PciHb0Rb1Base|0xb0080000
+  gHisiTokenSpaceGuid.PciHb0Rb2Base|0xb0090000
+  gHisiTokenSpaceGuid.PciHb0Rb3Base|0xb00a0000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionBaseAddress|0xb0000000
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionSize|0x7feffff #pci域的长度 128M - 64K, 64k给io用
+
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionBaseAddress|0xc0000000
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionSize|0x3feffff #pci域的长度 64M - 64K, 64k给io用
+
+  gHisiTokenSpaceGuid.PcdHb0Rb1CpuMemRegionBase|0x22008000000
+  #gHisiTokenSpaceGuid.PcdHb0Rb1CpuMemRegionBaseAddress|0x22008000000
+  gHisiTokenSpaceGuid.PcdHb0Rb2CpuMemRegionBase|0x2400c000000
+  #gHisiTokenSpaceGuid.PcdHb0Rb2CpuMemRegionBaseAddress|0x2400c000000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb1CpuIoRegionBase|0x2200fff0000
+  gHisiTokenSpaceGuid.PcdHb0Rb2CpuIoRegionBase|0x2400fff0000
+
+  gHisiTokenSpaceGuid.PcdHb0Rb1IoBase|0
+  gHisiTokenSpaceGuid.PcdHb0Rb1IoSize|0xffff #64K
+
+  gHisiTokenSpaceGuid.PcdHb0Rb2IoBase|0
+  gHisiTokenSpaceGuid.PcdHb0Rb2IoSize|0xffff #64K
 
 ################################################################################
 #
@@ -373,7 +411,13 @@
   IntelFrameworkModulePkg/Universal/StatusCode/RuntimeDxe/StatusCodeRuntimeDxe.inf
 
   #Pci Express
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/CpuIo2Dxe/CpuIo2Dxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Pv660/Drivers/PcieInitDxe/PcieInitDxe.inf
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/PciHostBridgeDxe/PciHostBridgeDxe.inf {
+     <LibraryClasses>
+       NULL|OpenPlatformPkg/Platforms/Hisilicon/D02/Library/PlatformPciLib/PlatformPciLib.inf
+  }
+  MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
 
   #
   #network
