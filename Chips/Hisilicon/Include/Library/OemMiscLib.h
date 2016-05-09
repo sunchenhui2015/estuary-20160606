@@ -36,6 +36,10 @@ VOID CoreSelectBoot(VOID);
 VOID OemPcieResetAndOffReset(void);
 extern I2C_DEVICE gDS3231RtcDevice;
 
+UINTN OemGetSocketNumber(VOID);
+UINTN OemGetDdrChannel (VOID);
+UINTN OemGetDimmSlot(UINTN Socket, UINTN Channel);
+
 BOOLEAN OemIsMpBoot();
 UINT32 OemIsWarmBoot();
 

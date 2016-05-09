@@ -36,6 +36,21 @@ BOOLEAN OemIsSocketPresent (UINTN Socket)
   return FALSE;
 }
 
+UINTN OemGetSocketNumber (VOID)
+{
+    return 1;
+}
+
+UINTN OemGetDimmSlot(UINTN Socket, UINTN Channel)
+{
+    return 2;
+}
+
+UINTN OemGetDdrChannel (VOID)
+{
+    return 2;
+}
+
 VOID CoreSelectBoot(VOID)
 {
     if (!PcdGet64 (PcdTrustedFirmwareEnable))
