@@ -213,6 +213,10 @@
   gArmTokenSpaceGuid.PcdGicDistributorBase|0x8D000000
   gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase|0xFE000000
   gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x8D100000
+
+  ## DTB address at spi flash
+  gHisiTokenSpaceGuid.FdtFileAddress|0xA4B00000
+
   gHisiTokenSpaceGuid.PcdNORFlashBase|0x90000000
   gHisiTokenSpaceGuid.PcdNORFlashCachableSize|0x8000000
 
@@ -481,6 +485,8 @@
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/MemorySubClassDxe/MemorySubClassDxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/ProcessorSubClassDxe/ProcessorSubClassDxe.inf
+
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/UpdateFdtDxe/UpdateFdtDxe.inf
 
   #
   # Memory test

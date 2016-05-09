@@ -247,6 +247,7 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Network/UefiPxeBcDxe/UefiPxeBcDxe.inf
   #INF MdeModulePkg/Universal/Network/VlanConfigDxe/VlanConfigDxe.inf
 
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/UpdateFdtDxe/UpdateFdtDxe.inf
   INF OpenPlatformPkg/Chips/Hisilicon/Pv660/Drivers/UnInstallAcpiTableDxe/UnInstallAcpiTable.inf
 
   #
