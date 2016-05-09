@@ -472,6 +472,9 @@
 
   #OpenPlatformPkg/Chips/Hisilicon/Network/OemFtp/OemFtp.inf
 
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D02/Drivers/AtaAtapiPassThru/AtaAtapiPassThru.inf
+  MdeModulePkg/Bus/Ata/AtaBusDxe/AtaBusDxe.inf
+
   #
   # USB Support
   #
