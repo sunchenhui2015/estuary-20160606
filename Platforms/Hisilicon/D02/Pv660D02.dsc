@@ -56,6 +56,9 @@
   UdpIoLib|MdeModulePkg/Library/DxeUdpIoLib/DxeUdpIoLib.inf
   IpIoLib|MdeModulePkg/Library/DxeIpIoLib/DxeIpIoLib.inf
 
+  #FDTUpdateLib
+  FdtUpdateLib|OpenPlatformPkg/Platforms/Hisilicon/D02/FdtUpdateLibD02/FdtUpdateLib.inf
+
   CpldIoLib|OpenPlatformPkg/Chips/Hisilicon/Library/CpldIoLib/CpldIoLib.inf
 
   SerdesLib|OpenPlatformPkg/Chips/Hisilicon/Binary/Pv660/Library/Pv660Serdes/Pv660SerdesLib.inf
