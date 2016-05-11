@@ -56,6 +56,9 @@
 
 
 
+  #FDTUpdateLib
+  FdtUpdateLib|OpenPlatformPkg/Platforms/Hisilicon/D03/Library/FdtUpdateLib/FdtUpdateLib.inf
+
   CpldIoLib|OpenPlatformPkg/Chips/Hisilicon/Library/CpldIoLib/CpldIoLib.inf
 
   SerdesLib|OpenPlatformPkg/Chips/Hisilicon/Binary/Hi1610/Library/Hi1610Serdes/Hi1610SerdesLib.inf
@@ -252,6 +255,7 @@
   gHisiTokenSpaceGuid.PcdBottomOfHighMemory|0x2000000000
 
   gHisiTokenSpaceGuid.PcdTrustedFirmwareEnable|0x1
+  gHisiTokenSpaceGuid.PcdNumaEnable|0
 
   gHisiTokenSpaceGuid.PcdHb1BaseAddress|0x40000000000
 
@@ -480,6 +484,8 @@
 
   MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
+
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/UpdateFdtDxe/UpdateFdtDxe.inf
 
   #PCIe Support
   OpenPlatformPkg/Chips/Hisilicon/Drivers/CpuIo2Dxe/CpuIo2Dxe.inf
