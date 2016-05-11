@@ -374,6 +374,7 @@
   }
   MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
 
+  OpenPlatformPkg/Chips/Hisilicon/Hi1610/Drivers/IoInitDxe/IoInitDxe.inf
 
   #
   # Architectural Protocols
