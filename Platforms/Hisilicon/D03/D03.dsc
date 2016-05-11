@@ -382,6 +382,7 @@
   ArmPkg/Drivers/CpuDxe/CpuDxe.inf
   MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
 
+  OpenPlatformPkg/Platforms/Hisilicon/D03/Drivers/OemNicConfig2PHi1610/OemNicConfig2P.inf
 
   OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/SFC/SfcDxeDriver.inf
 
@@ -428,6 +429,25 @@
   MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
   MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
 
+
+  #
+  #network
+  #
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Net/SnpPV660DxeMac0/SnpPV600DxeMac0.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Net/SnpPV660DxeMac1/SnpPV600DxeMac1.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Net/SnpPV660DxeMac4/SnpPV600DxeMac4.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Net/SnpPV660DxeMac5/SnpPV600DxeMac5.inf
+
+  MdeModulePkg/Universal/Network/ArpDxe/ArpDxe.inf
+  MdeModulePkg/Universal/Network/Dhcp4Dxe/Dhcp4Dxe.inf
+  MdeModulePkg/Universal/Network/DpcDxe/DpcDxe.inf
+  MdeModulePkg/Universal/Network/Ip4Dxe/Ip4Dxe.inf
+  MdeModulePkg/Universal/Network/MnpDxe/MnpDxe.inf
+  MdeModulePkg/Universal/Network/Mtftp4Dxe/Mtftp4Dxe.inf
+  MdeModulePkg/Universal/Network/Tcp4Dxe/Tcp4Dxe.inf
+  MdeModulePkg/Universal/Network/Udp4Dxe/Udp4Dxe.inf
+  MdeModulePkg/Universal/Network/UefiPxeBcDxe/UefiPxeBcDxe.inf
+  MdeModulePkg/Universal/Network/VlanConfigDxe/VlanConfigDxe.inf
 
   #
   # FAT filesystem + GPT/MBR partitioning
