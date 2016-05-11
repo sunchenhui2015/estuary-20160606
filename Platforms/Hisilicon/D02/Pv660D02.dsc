@@ -116,30 +116,7 @@
 
   gArmPlatformTokenSpaceGuid.PcdCoreCount|8
 
-  #
-  # NV Storage PCDs. Use base of 0x0C000000 for NOR1
-  #
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableBase|0xa49D0000
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableSize|0x0000E000
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwWorkingBase|0xa49DE000
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwWorkingSize|0x00002000
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwSpareBase|0xa49E0000
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwSpareSize|0x00010000
-
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableBase|0x310C0000
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageVariableSize|0x00010000
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwWorkingBase|0x310D0000
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwWorkingSize|0x00010000
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwSpareBase|0x310E0000
-  #gEfiMdeModulePkgTokenSpaceGuid.PcdFlashNvStorageFtwSpareSize|0x00010000
-
-  #gEfiSecurityPkgTokenSpaceGuid.PcdOptionRomImageVerificationPolicy|0x02
-  #gEfiSecurityPkgTokenSpaceGuid.PcdRemovableMediaImageVerificationPolicy|0x02
-  #gEfiSecurityPkgTokenSpaceGuid.PcdFixedMediaImageVerificationPolicy|0x02
-
   gEfiMdeModulePkgTokenSpaceGuid.PcdMaxVariableSize|0x2000
-
-  gArmTokenSpaceGuid.PcdVFPEnabled|0
 
   # Stacks for MPCores in Secure World
   #gArmPlatformTokenSpaceGuid.PcdCPUCoresSecStackBase|0x21000000
@@ -158,11 +135,9 @@
   #gArmPlatformTokenSpaceGuid.PcdCPUCorePrimaryStackSize|0x4000
   gArmPlatformTokenSpaceGuid.PcdCPUCoresStackBase|0xE1000000
   gArmPlatformTokenSpaceGuid.PcdCPUCorePrimaryStackSize|0xFF00
-  #UEFI BIOS_t00216239_end   2014-10-29 11:00:07
 
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00000000
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x3FC00000
-  #gArmTokenSpaceGuid.PcdSystemMemorySize|0x20000000
 
   # Size of the region used by UEFI in permanent memory (Reserved 64MB)
   gArmPlatformTokenSpaceGuid.PcdSystemMemoryUefiRegionSize|0x10000000
@@ -288,10 +263,10 @@
   gHisiTokenSpaceGuid.PciHb0Rb3Base|0xb00a0000
 
   gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionBaseAddress|0xb0000000
-  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionSize|0x7feffff #pci域的长度 128M - 64K, 64k给io用
+  gHisiTokenSpaceGuid.PcdHb0Rb1PciRegionSize|0x7feffff
 
   gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionBaseAddress|0xc0000000
-  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionSize|0x3feffff #pci域的长度 64M - 64K, 64k给io用
+  gHisiTokenSpaceGuid.PcdHb0Rb2PciRegionSize|0x3feffff
 
   gHisiTokenSpaceGuid.PcdHb0Rb1CpuMemRegionBase|0x22008000000
   #gHisiTokenSpaceGuid.PcdHb0Rb1CpuMemRegionBaseAddress|0x22008000000
