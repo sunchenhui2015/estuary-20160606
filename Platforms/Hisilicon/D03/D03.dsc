@@ -277,6 +277,11 @@
   gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceBaseAddress|0xAC000000
   gHisiTokenSpaceGuid.PcdHb0Rb3PciConfigurationSpaceSize|0x4000000
 
+  gHisiTokenSpaceGuid.PciHb0Rb0Base|0xa0090000
+  gHisiTokenSpaceGuid.PciHb0Rb1Base|0xa0200000
+  gHisiTokenSpaceGuid.PciHb0Rb2Base|0xa00a0000
+  gHisiTokenSpaceGuid.PciHb0Rb3Base|0xa00b0000
+
   gHisiTokenSpaceGuid.PcdHb0Rb0PciRegionBaseAddress|0xb2000000
   gHisiTokenSpaceGuid.PcdHb0Rb0PciRegionSize|0x5feffff
 
@@ -303,6 +308,7 @@
   gHisiTokenSpaceGuid.PcdHb0Rb2IoBase|0
   gHisiTokenSpaceGuid.PcdHb0Rb2IoSize|0xffff #64K
 
+  gHisiTokenSpaceGuid.Pcdsoctype|0x1610
   ## SP804 DualTimer
   gArmPlatformTokenSpaceGuid.PcdSP804TimerFrequencyInMHz|200
   gArmPlatformTokenSpaceGuid.PcdSP804TimerPeriodicInterruptNum|0xb0
@@ -311,6 +317,7 @@
   gArmPlatformTokenSpaceGuid.PcdSP804TimerPerformanceBase|0x40060000
   gArmPlatformTokenSpaceGuid.PcdSP804TimerMetronomeBase|0x40060000
 
+  gHisiTokenSpaceGuid.PcdPcieMsiTargetAddress|0xc6010040
 
 ################################################################################
 #
@@ -468,6 +475,17 @@
 
   MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
+
+  #PCIe Support
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/CpuIo2Dxe/CpuIo2Dxe.inf
+  OpenPlatformPkg/Chips/Hisilicon/Hi1610/Drivers/PcieInit1610/PcieInitDxe.inf
+  OpenPlatformPkg/Platforms/Hisilicon/D03/Drivers/PciPlatform/PciPlatform.inf
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/PciHostBridgeDxe/PciHostBridgeDxe.inf {
+    <LibraryClasses>
+      NULL|OpenPlatformPkg/Platforms/Hisilicon/D03/Library/PlatformPciLib/PlatformPciLib.inf
+  }
+
+  MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
 
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/MemorySubClassDxe/MemorySubClassDxe.inf
 

@@ -165,6 +165,7 @@ READ_LOCK_STATUS   = TRUE
 
   INF OpenPlatformPkg/Platforms/Hisilicon/D03/Drivers/OemNicConfig2PHi1610/OemNicConfig2P.inf
 
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/CpuIo2Dxe/CpuIo2Dxe.inf
 
   INF OpenPlatformPkg/Chips/Hisilicon/Drivers/FlashFvbDxe/FlashFvbDxe.inf
   INF MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteDxe.inf
@@ -229,6 +230,14 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Network/Udp4Dxe/Udp4Dxe.inf
   INF MdeModulePkg/Universal/Network/UefiPxeBcDxe/UefiPxeBcDxe.inf
   #INF MdeModulePkg/Universal/Network/VlanConfigDxe/VlanConfigDxe.inf
+
+  #
+  # PCI Support
+  #
+  INF OpenPlatformPkg/Chips/Hisilicon/Hi1610/Drivers/PcieInit1610/PcieInitDxe.inf
+  INF OpenPlatformPkg/Platforms/Hisilicon/D03/Drivers/PciPlatform/PciPlatform.inf
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/PciHostBridgeDxe/PciHostBridgeDxe.inf
+  INF MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
 
   #
   # UEFI application (Shell Embedded Boot Loader)
