@@ -355,6 +355,8 @@
   ArmPlatformPkg/PrePeiCore/PrePeiCoreMPCore.inf
   MdeModulePkg/Core/Pei/PeiMain.inf
   MdeModulePkg/Universal/PCD/Pei/Pcd.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Ipmi/IpmiInterfacePei/IpmiInterfacePei.inf
+
   ArmPlatformPkg/PlatformPei/PlatformPeim.inf
 
   OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/MemoryInitPei/MemoryInitPeim.inf
@@ -436,6 +438,18 @@
   MdeModulePkg/Universal/Acpi/AcpiPlatformDxe/AcpiPlatformDxe.inf
   MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
 
+  #
+  # Usb Support
+  #
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/VirtualEhciPciIo/VirtualEhciPciIo.inf
+  MdeModulePkg/Bus/Pci/EhciDxe/EhciDxe.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/OhciDxe/OhciDxe.inf
+  MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf
+  MdeModulePkg/Bus/Usb/UsbKbDxe/UsbKbDxe.inf
+  MdeModulePkg/Bus/Usb/UsbMouseDxe/UsbMouseDxe.inf
+  MdeModulePkg/Bus/Usb/UsbMassStorageDxe/UsbMassStorageDxe.inf
+
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Ipmi/ipmiInterfaceDxe/IpmiInterfaceDxe.inf
 
   #
   #network
@@ -456,6 +470,8 @@
   MdeModulePkg/Universal/Network/UefiPxeBcDxe/UefiPxeBcDxe.inf
   MdeModulePkg/Universal/Network/VlanConfigDxe/VlanConfigDxe.inf
 
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Sas/SasDxeDriver.inf
+
   #
   # FAT filesystem + GPT/MBR partitioning
   #
@@ -472,6 +488,11 @@
   #
   MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
 
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/GetInfoFromBmc/GetInfoFromBmc.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/TransferSmbiosInfo/TransSmbiosInfo.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/IpmiMiscOpDxe/IpmiMiscOpDxe.inf
+
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/IpmiWatchdogDxe/IpmiWatchdogDxe.inf
 
   MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
@@ -486,6 +507,10 @@
   }
 
   MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
+
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/ReportPciePlugDidVidToBmc/ReportPciePlugDidVidToBmc.inf
+  OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/AddSmbiosType9/AddSmbiosType9.inf
+  OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Sm750Dxe/UefiSmi.inf
 
   OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/MemorySubClassDxe/MemorySubClassDxe.inf
 
