@@ -206,6 +206,33 @@ READ_LOCK_STATUS   = TRUE
   INF IntelFrameworkModulePkg/Universal/StatusCode/RuntimeDxe/StatusCodeRuntimeDxe.inf
 
   #
+  # Usb Support
+  #
+
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/VirtualEhciPciIo/VirtualEhciPciIo.inf
+  INF MdeModulePkg/Bus/Pci/EhciDxe/EhciDxe.inf
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/OhciDxe/OhciDxe.inf
+  INF MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf
+  INF MdeModulePkg/Bus/Usb/UsbKbDxe/UsbKbDxe.inf
+  INF MdeModulePkg/Bus/Usb/UsbMouseDxe/UsbMouseDxe.inf
+  INF MdeModulePkg/Bus/Usb/UsbMassStorageDxe/UsbMassStorageDxe.inf
+
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Ipmi/ipmiInterfaceDxe/IpmiInterfaceDxe.inf
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/GetInfoFromBmc/GetInfoFromBmc.inf
+  INF MdeModulePkg/Universal/SmbiosDxe/SmbiosDxe.inf
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/SmbiosMiscDxe/SmbiosMiscDxe.inf
+
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/AddSmbiosType9/AddSmbiosType9.inf
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/TransferSmbiosInfo/TransSmbiosInfo.inf
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/IpmiMiscOpDxe/IpmiMiscOpDxe.inf
+
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/IpmiWatchdogDxe/IpmiWatchdogDxe.inf
+
+
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/MemorySubClassDxe/MemorySubClassDxe.inf
+
+  INF OpenPlatformPkg/Chips/Hisilicon/Drivers/Smbios/ProcessorSubClassDxe/ProcessorSubClassDxe.inf
+  #
   #Network
   #
 
@@ -233,6 +260,12 @@ READ_LOCK_STATUS   = TRUE
   INF OpenPlatformPkg/Chips/Hisilicon/Drivers/PciHostBridgeDxe/PciHostBridgeDxe.inf
   INF MdeModulePkg/Bus/Pci/PciBusDxe/PciBusDxe.inf
 
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/ReportPciePlugDidVidToBmc/ReportPciePlugDidVidToBmc.inf
+  # VGA Driver
+  #
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Sm750Dxe/UefiSmi.inf
+
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Sas/SasDxeDriver.inf
   #
   # UEFI application (Shell Embedded Boot Loader)
   #
@@ -286,6 +319,8 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/Variable/Pei/VariablePei.inf
 
   INF OpenPlatformPkg/Chips/Hisilicon/Drivers/VersionInfoPeim/VersionInfoPeim.inf
+
+  INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/Drivers/Ipmi/IpmiInterfacePei/IpmiInterfacePei.inf
   INF OpenPlatformPkg/Platforms/Hisilicon/Binary/D03/MemoryInitPei/MemoryInitPeim.inf
   INF ArmPkg/Drivers/CpuPei/CpuPei.inf
   INF MdeModulePkg/Universal/PCD/Pei/Pcd.inf
