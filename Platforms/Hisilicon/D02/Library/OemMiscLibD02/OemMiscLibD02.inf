@@ -24,6 +24,7 @@
 [Sources.common]
   BoardFeatureD02.c
   OemMiscLibD02.c
+  BoardFeatureD02Strings.uni
 
 [Packages]
   MdePkg/MdePkg.dec
