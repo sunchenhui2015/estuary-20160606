@@ -16,12 +16,14 @@
 #include <Uefi.h>
 #include <Library/DebugLib.h>
 #include <Library/BaseMemoryLib.h>
+#include <PlatformArch.h>
 #include <Library/OemMiscLib.h>
 #include <Library/SerdesLib.h>
 #include <Library/CpldIoLib.h>
 #include <Library/CpldD02.h>
 #include <Library/TimerLib.h>
 #include <Library/I2CLib.h>
+#include <Library/HiiLib.h>
 
 I2C_DEVICE gDS3231RtcDevice = {
     .Socket = 0,
@@ -84,3 +86,21 @@ VOID OemPcieResetAndOffReset(void)
     return;
   }
 
+EFI_STRING_ID gDimmToDevLocator[MAX_SOCKET][MAX_CHANNEL][MAX_DIMM] = {
+  {{STRING_TOKEN(STR_D02_DIMM_000), STRING_TOKEN(STR_D02_DIMM_001), 0xFFFF},
+   {STRING_TOKEN(STR_D02_DIMM_010), STRING_TOKEN(STR_D02_DIMM_011), 0xFFFF}}
+};
+
+EFI_HII_HANDLE
+EFIAPI
+OemGetPackages (
+  )
+{
+    return HiiAddPackages (
+                            &gEfiCallerIdGuid,
+                            NULL,
+                            OemMiscLibD02Strings,
+                            NULL,
+                            NULL
+                            );
+}
