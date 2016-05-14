@@ -31,7 +31,7 @@
 
 // Differs from Juno, we have another affinity level beyond cluster and core
 // 0x20000 is only for socket 0
-#define PLATFORM_GET_MPID(ClusterId, CoreId)   (0x20000 | ((ClusterId) << 8) | (CoreId))
+#define PLATFORM_GET_MPID(ClusterId, CoreId)   (0x10000 | ((ClusterId) << 8) | (CoreId))
 
 //
 // Multiple APIC Description Table
@@ -42,10 +42,9 @@ typedef struct {
   EFI_ACPI_1_0_MULTIPLE_APIC_DESCRIPTION_TABLE_HEADER   Header;
   //EFI_ACPI_5_1_GIC_STRUCTURE                            GicInterfaces[FixedPcdGet32 (PcdCoreCount)];
   EFI_ACPI_5_1_GIC_STRUCTURE                            GicInterfaces[16];
-  EFI_ACPI_5_0_GIC_DISTRIBUTOR_STRUCTURE                GicDistributor;
+  EFI_ACPI_6_0_GIC_DISTRIBUTOR_STRUCTURE                GicDistributor;
   //EFI_ACPI_5_1_GICR_STRUCTURE                     GicRe;
   EFI_ACPI_6_0_GIC_ITS_STRUCTURE                      GicITS[1];
-  EFI_ACPI_HuaWei_GIC_MBI_STRUCTURE                    GicMBI[3];
 } EFI_ACPI_1_0_MULTIPLE_APIC_DESCRIPTION_TABLE;
 
 #pragma pack ()
@@ -120,42 +119,10 @@ EFI_ACPI_1_0_MULTIPLE_APIC_DESCRIPTION_TABLE Madt = {
         FixedPcdGet32 (PcdGicInterruptInterfaceBase) + 0x20000, FixedPcdGet32 (PcdGicInterruptInterfaceBase) + 0x10000, 25, FixedPcdGet32 (PcdGicDistributorBase) + 0x3D0000 /* GicRBase */),
   },
 
-  EFI_ACPI_5_0_GIC_DISTRIBUTOR_INIT(0, FixedPcdGet32 (PcdGicDistributorBase), 0),
-  //{
-//  EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x100000,0x300000),//1
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x400000,0x300000),//2
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x700000,0x300000),//3
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0xA00000,0x300000),//4
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0xD00000,0x300000),//5
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1000000,0x300000),//6
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1300000,0x300000),//7
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1600000,0x300000),//8
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1900000,0x300000),//9
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1C00000,0x300000),//10
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x1F00000,0x300000),//11
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x2200000,0x300000),//12
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x2500000,0x300000),//13
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x2800000,0x300000),//14
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x2B00000,0x300000),//15
- // EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x2E00000,0x300000) //16
-  //},
-   //EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x100000,0x300000),//1
+  EFI_ACPI_6_0_GIC_DISTRIBUTOR_INIT(0, FixedPcdGet32 (PcdGicDistributorBase), 0, 0x4),
+  //EFI_ACPI_5_1_GICR_STRUCTURE_INIT(FixedPcdGet32 (PcdGicDistributorBase) + 0x100000,0x300000),//1
   {
-    //EFI_ACPI_6_0_GIC_ITS_INIT(0,0x6C000000),
-    //EFI_ACPI_6_0_GIC_ITS_INIT(2,0x4C000000),
     EFI_ACPI_6_0_GIC_ITS_INIT(0,0xC6000000),
-    //EFI_ACPI_6_0_GIC_ITS_INIT(2,0xD3000000),
-    //EFI_ACPI_6_0_GIC_ITS_INIT(3,0xA3000000),
-    //EFI_ACPI_6_0_GIC_ITS_INIT(4,0xB7000000)
-  },
-  {
-  //EFI_ACPI_HuaWei_GIC_MBI_INIT(1,1,0x4C030000,0x10000),
-  //EFI_ACPI_HuaWei_GIC_MBI_INIT(0,0,0x8C030000,0x10000),
-  //EFI_ACPI_HuaWei_GIC_MBI_INIT(1,1,0xC6030000,0x10000),
-  //EFI_ACPI_HuaWei_GIC_MBI_INIT(2,3,0xA3030000,0x10000)
-  EFI_ACPI_HuaWei_GIC_MBI_INIT(0,0,0xA0080000,0x10000),
-  EFI_ACPI_HuaWei_GIC_MBI_INIT(1,0,0xC0080000,0x10000),
-  EFI_ACPI_HuaWei_GIC_MBI_INIT(2,0,0xD0080000,0x10000)
   }
 };
 
