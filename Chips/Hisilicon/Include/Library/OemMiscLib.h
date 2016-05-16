@@ -18,7 +18,6 @@
 #define _OEM_MISC_LIB_H_
 
 #include <Uefi.h>
-
 #include <PlatformArch.h>
 #include <Library/I2CLib.h>
 
@@ -42,8 +41,8 @@ UINTN OemGetDimmSlot(UINTN Socket, UINTN Channel);
 
 BOOLEAN OemIsMpBoot();
 UINT32 OemIsWarmBoot();
-
 VOID OemBiosSwitch(UINT32 Master);
+
 
 extern EFI_STRING_ID gDimmToDevLocator[MAX_SOCKET][MAX_CHANNEL][MAX_DIMM];
 EFI_HII_HANDLE EFIAPI OemGetPackages ();
