@@ -45,4 +45,4 @@
   gPlatformSasProtocolGuid
 
 [Depex]
-  TRUE
+  NOT gSataEnableFlagProtocolGuid
