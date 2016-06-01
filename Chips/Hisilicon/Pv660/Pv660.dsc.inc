@@ -245,9 +245,7 @@
 
 [BuildOptions]
   RVCT:RELEASE_*_*_CC_FLAGS  = -DMDEPKG_NDEBUG
-  #GCC:RELEASE_*_*_CC_FLAGS  = -DMDEPKG_NDEBUG
-  ## DebugLib.h, DebugPeCoffExtraActionLib.c and MmcDebug.c
-  GCC:RELEASE_*_*_CC_FLAGS  =
+  GCC:RELEASE_*_*_CC_FLAGS  = -DMDEPKG_NDEBUG
 
 [BuildOptions.common.EDKII.DXE_RUNTIME_DRIVER]
   GCC:*_*_ARM_DLINK_FLAGS = -z common-page-size=0x1000
