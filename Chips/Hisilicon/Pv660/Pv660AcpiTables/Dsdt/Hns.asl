@@ -906,7 +906,7 @@ Scope(_SB)
     Name (_DSD, Package () {
       ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
       Package () {
-        Package () {"local-mac-address", Package () { 0, 0, 0, 0x1, 0, 0x5f }}, // 6-bytes
+        Package () {"local-mac-address", Package () { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }}, // 6-bytes
         Package () {"ae-handle", Package (){\_SB.DSF0}},
         Package () {"port-idx-in-ae", 5},
       }
@@ -918,7 +918,7 @@ Scope(_SB)
     Name (_DSD, Package () {
       ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
       Package () {
-        Package () {"local-mac-address", Package () { 0, 0, 0, 0x1, 0, 0x54 }}, // 6-bytes
+        Package () {"local-mac-address", Package () { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }}, // 6-bytes
         Package () {"ae-handle", Package (){\_SB.DSF0}},
         Package () {"port-idx-in-ae", 4},
       }
@@ -930,7 +930,7 @@ Scope(_SB)
     Name (_DSD, Package () {
       ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
       Package () {
-        Package () {"local-mac-address", Package () { 0, 0, 0, 0x1, 0, 0x50 }}, // 6-bytes
+        Package () {"local-mac-address", Package () { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }}, // 6-bytes
         Package () {"ae-handle", Package (){\_SB.DSF0}},
         Package () {"port-idx-in-ae", 0},
       }
@@ -942,7 +942,7 @@ Scope(_SB)
     Name (_DSD, Package () {
       ToUUID("daffd814-6eba-4d8c-8a91-bc9bbf4aa301"),
       Package () {
-        Package () {"local-mac-address", Package () { 0, 0, 0, 0x1, 0, 0x51 }}, // 6-bytes
+        Package () {"local-mac-address", Package () { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }}, // 6-bytes
         Package () {"ae-handle", Package (){\_SB.DSF0}},
         Package () {"port-idx-in-ae", 1},
       }
